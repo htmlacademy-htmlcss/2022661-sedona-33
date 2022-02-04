@@ -22,27 +22,28 @@
             <a class="navigation-link navigation-link-current">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">Избранное</span>
-              </a>
-          </li>
-          <li class="navigation-item">
-            <a class="button navigation-button" href="#">Хочу сюда!</a>
-          </li>
-        </ul>
       </nav>
+
+      <ul class="user-menu">
+        <li class="user-menu-item">
+          <a class="user-menu-link" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="user-menu-item">
+          <a class="user-menu-link" href="#">
+            <span class="visually-hidden">Избранное</span>
+            </a>
+        </li>
+        <li class="user-menu-item">
+          <a class="button user-menu-button" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
     </header>
 
     <main class="inner-page">
-        <header class="inner-page-header">
-            <h1 class="inner-page-header-title">Гостиницы Седоны</h1>
+       <section class="hotel-search"> 
+            <h1 class="hotel-search-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
                     <a class="breadcrumbs-link" href="index.html">
@@ -53,9 +54,7 @@
                     <a class="breadcrumbs-link">Гостиницы</a>
                 </li>
             </ul>
-        </header>
-
-        <section class="hotel-search">
+       
             <h2 class="visually-hidden">Фильтр выбора жилья</h2>
             <form class="hotel-filter" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="hotel-filter-group">
@@ -123,15 +122,23 @@
                     <option value="popular">Сначала популярные</option>
             </select>
         
-        <a class="button black" href="#">
+        <ul class="hotel-search-menu-view-list">
+          <li class="hotel-search-menu-view-item">
+            <a class="button black" href="#">
             <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="button white" href="#">
-            <span class="visually-hidden">Показать в слайдере</span>
-        </a>
-        <a class="button white" href="#">
-            <span class="visually-hidden">Показать список</span>
-        </a>
+            </a>
+          </li>
+          <li class="hotel-search-menu-view-item">
+            <a class="button white" href="#">
+              <span class="visually-hidden">Показать в слайдере</span>
+          </a>
+          </li>
+          <li class="hotel-search-menu-view-item">
+            <a class="button white" href="#">
+              <span class="visually-hidden">Показать список</span>
+          </a>
+          </li>
+        </ul>
         
         <ul class="hotel-search-results-list">
             <li class="hotel-card">
@@ -143,6 +150,7 @@
                 <span class="hotel-price">От 4000 ₽</span>
                 <a class="button hotel-card-button" href="#">подробнее</a>
                 <button class="button like-button" type="button">В избранное</button>
+                <span class="vissually-hidden">4 звезды</span>
                 <span class="hotel-rating">Рейтинг: 8,5</span>
             </li>
             <li class="hotel-card">
@@ -154,6 +162,7 @@
                 <span class="hotel-price">От 3000 ₽</span>
                 <a class="button hotel-card-button" href="#">подробнее</a>
                 <button class="button like-button" type="button">В избранное</button>
+                <span class="vissually-hidden">3 звезды</span>
                 <span class="hotel-rating">Рейтинг: 8,9</span>
             </li>
             <li class="hotel-card">
@@ -165,6 +174,7 @@
                 <span class="hotel-price">От 2000 ₽</span>
                 <a class="button hotel-card-button" href="#">подробнее</a>
                 <button class="button like-button-active" type="button">В избранном</button>
+                <span class="vissually-hidden">2 звезды</span>
                 <span class="hotel-rating">Рейтинг: 9,2</span>
             </li>
             <li class="hotel-card">
@@ -176,6 +186,7 @@
                 <span class="hotel-price">От 3000 ₽</span>
                 <a class="button hotel-card-button" href="#">подробнее</a>
                 <button class="button like-button" type="button">В избранное</button>
+                <span class="vissually-hidden">2 звезды</span>
                 <span class="hotel-rating">Рейтинг: 9,2</span>
             </li>
         </ul>
@@ -217,8 +228,7 @@
 
         <section class="subscription">
             <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-            <p class="subscription-description">Только полезная информация и никакого спама,<br>
-              честное бойскаутское!</p>
+            <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
               <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
                <label class="visually-hidden">Email
                 <input class="field" name="subscription-email" type="email" placeholder="Ваш e-mail" required>
@@ -234,17 +244,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="button social-bottom" href="https://twitter.com/htmlacademy_ru">
+            <a class="button social-bottom" href="https://twitter.com/htmlacademy_ru" target="_blank">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button social-bottom" href="https://www.facebook.com/htmlacademy">
+            <a class="button social-bottom" href="https://www.facebook.com/htmlacademy" target="_blank">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button social-bottom" href=" https://www.youtube.com/c/HTMLAcademyRUS">
+            <a class="button social-bottom" href=" https://www.youtube.com/c/HTMLAcademyRUS" target="_blank">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
@@ -260,7 +270,7 @@
   
 
     
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/" target="_blank">
         <img class="htmlacademy-logo" src="" alt="Сделано в html academy">
       </a>
   
