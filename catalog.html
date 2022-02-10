@@ -8,6 +8,7 @@
 
   <body>
     <header class="page-header">
+      <div class="page-header-container">
       <nav class="navigation">
         <a class=navigation-logo href="index.html">
           <img class="page-header-logo" src="images/header/logo-sedona.svg" width="139" height="70" alt="Логотип Седона">
@@ -40,9 +41,11 @@
           <a class="button user-menu-button brown-button" href="#">Хочу сюда!</a>
         </li>
       </ul>
+      </div>
     </header>
 
-    <main class="inner-page">
+    <main class="inner-page main-container">
+      <div class="page-container">
        <section class="hotel-search"> 
             <h1 class="hotel-search-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
@@ -56,7 +59,7 @@
                 </li>
             </ul>
        
-            <h2 class="visually-hidden">Фильтр выбора жилья</h2>
+            <h2 class="visually-hidden" hidden>Фильтр выбора жилья</h2>
             <form class="hotel-filter" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="hotel-filter-group">
                     <legend class="hotel-filter-titel">Инфраструктура:</legend>
@@ -115,6 +118,7 @@
             </form>
         </section>
 
+        <div class="hotel-search-results-container">
         <section class="hotel-search-results">
             <h2 class="hotel-search-results-titel">Найдено гостиниц: 38</h2>
             <select class="select-control" aria-label="Сортировка">
@@ -226,6 +230,7 @@
         </select>
 
          </section>
+        </div>
 
         <section class="subscription-inner">
             <h2 class="subscription-title">Подпишитесь на рассылку</h2>
@@ -237,12 +242,14 @@
                 <button class="button subscription-button blue-button" type="submit">Подписаться</button>
               </form>
           </section>
+      </div>
     </main>
 
 
     <footer class="page-footer">
-        <section class="footer-social">
-        <h2 class="visually-hidden">Социальные сети</h2>
+      <div class="page-footer-container">
+      <section class="footer-social">
+        <h2 class="visually-hidden" hidden>Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button social-buttom" href="https://twitter.com/htmlacademy_ru" target="_blank">
@@ -263,7 +270,7 @@
       </section>
   
       <section class="footer-contacts">
-        <h2 class="visually-hidden">Телефон</h2>
+        <h2 class="visually-hidden" hidden>Телефон</h2>
         <address class="footer-contacts-adress">
           <a class="footer-contacts-adress-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
@@ -274,6 +281,7 @@
       <a class="htmlacademy-link" href="https://htmlacademy.ru/" target="_blank">
         <img class="htmlacademy-logo" src="images/footer/htmlacademy-logo.svg" width="115" height="34" alt="Сделано в html academy">
       </a>
+      </div>
   
       </footer>
       </body>
