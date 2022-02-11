@@ -20,16 +20,21 @@
 
    
    body {
-       margin: 0;
-       display: flex;
-       flex-direction: column;
-       min-height: 100%;
        font-family: "PT Sans", sans-serif;
        font-weight: 400;
        font-size: 22px;
        line-height: 26px;
        color: #000000;
        background-color: #FFFFFF;
+   }
+   
+   .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
    }
 
    .button {
@@ -56,10 +61,13 @@
        background-color: #7DB54F;
    }
 
-   .page-header-container {
-       display: flex;
+   .container {
        width: 1060px;
        margin: 0 auto;
+   }
+
+   .flex-container {
+       display: flex;
    }
 
    .navigation-list {
@@ -105,7 +113,7 @@
     line-height: 20px;
    }
 
-   main-container {
+   .main-container {
        flex-grow: 1;
    }
 
@@ -120,12 +128,7 @@
     line-height: 23px;
     }
 
-    .page-container{
-        width: 1200px;
-        margin: 0 auto;
-    }
-
-   .main-blok {
+   .main-block {
     background-image: url("../images/index/index-background.jpeg");
     background-color: #83B3D3;
     background-size: 100% auto;
@@ -133,44 +136,9 @@
    }
 
    .advantages-list {
-    width: 1200px;
     margin: 0;
     padding: 0;
    }
-
-    .advantages-1-block {
-       display: flex; 
-       justify-content: space-around;
-       width: 1200px;
-       margin: 0;
-       padding: 0;
-   }   
-
-   .advantages-item {
-    width: 400px;
-}
-
-   .inner-advantages-list{
-       display: flex;
-       justify-content: space-around;
-       width: 1200px;
-       margin: 0;
-       padding: 0;
-   }
-
-   .advantages-2-block {
-    display: flex;
-    width: 1200px;
-    flex-direction: row-reverse;
-   }
-
-  .advantages-3-block {
-        display: flex; 
-        justify-content: space-around;
-        width: 1200px;
-        margin: 0;
-        padding: 0;
-  }
 
    .advantages-description-title.about {
     font-weight: 700;
@@ -245,12 +213,6 @@
     border-radius: 0px 10px 10px 0px;
   }
 
-  .page-footer-container {
-      display: flex;
-      width: 1200px;
-      margin: 0 auto;
-  }
-
   .footer-social-list {
       width: 130px;
       margin: 0;
@@ -288,15 +250,8 @@
     background-image: url("../images/catalog/catalog-background.jpeg");
     background-repeat: no-repeat;
     background-size: 100% auto;
-    display: flex;
-    width: 1200px;
-    flex-direction: column;
 }
 
-.hotel-filter {
-    display: flex;
-    justify-content: space-around;
-}
 
 .hotel-search-title {
     font-weight: 700;
@@ -343,10 +298,6 @@
     text-transform: none;
 }
 
-.hotel-search-results-container {
-    display: flex;
-    width: 1057px;
-}
 
 .hotel-search-results-titel {
     font-weight: 700;
