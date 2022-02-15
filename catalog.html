@@ -59,9 +59,10 @@
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
-    
-        <h2 class="visually-hidden">Фильтр выбора жилья</h2>
-        <form class="hotel-filter" action="https://echo.htmlacademy.ru/" method="get">
+          </div>
+
+          <h2 class="visually-hidden">Фильтр выбора жилья</h2>
+          <form class="hotel-filter container flex-container" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="hotel-filter-group">
                 <legend class="hotel-filter-titel">Инфраструктура:</legend>
                 <ul class="hotel-filter-list">
@@ -73,7 +74,7 @@
                     <li class="hotel-filter-item">
                         <label class="control">
                           <input class="control-input" type="checkbox" name="Парковка" checked>Парковка
-                         </label>
+                        </label>
                     </li>
                     <li class="hotel-filter-item">
                         <label class="control">
@@ -84,24 +85,24 @@
             </fieldset>
 
             <fieldset class="hotel-filter-group">
-                <legend class="hotel-filter-titel">Тип жилья:</legend>
-                <ul class="hotel-filter-list">
-                    <li class="hotel-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" value="hotel" name="type of housing" checked>Гостиница
-                      </label>
-                    </li>
-                    <li class="hotel-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" value="motel" name="type of housing">Мотель
-                      </label>
-                    </li>
-                    <li class="hotel-filter-item">
-                      <label class="control">
-                        <input class="control-input" type="radio" value="apartments" name="type of housing">Апартаменты
-                      </label>
-                    </li>
-                </ul>
+              <legend class="hotel-filter-titel">Тип жилья:</legend>
+              <ul class="hotel-filter-list">
+                  <li class="hotel-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" value="hotel" name="type of housing" checked>Гостиница
+                    </label>
+                  </li>
+                  <li class="hotel-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" value="motel" name="type of housing">Мотель
+                    </label>
+                  </li>
+                  <li class="hotel-filter-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" value="apartments" name="type of housing">Апартаменты
+                    </label>
+                  </li>
+              </ul>
             </fieldset>
 
             <fieldset class="hotel-filter-group">
@@ -115,9 +116,8 @@
 
             <button class="button apply-button blue-button" type="submit">Применить</button>
             <button class="button reset-button clear-button" type="reset">Сбросить</button>
-
-        </form>
-          </div>
+          </form> 
+            
         </section>
 
         
@@ -205,7 +205,7 @@
           <button class="button pagination-load-more blue-button" type="button">Загрузить ещё</button>
 
           <div class="container flex-container pagination-container">
-            <ul class="pagination">
+            <ul class="pagination flex-container">
               <li class="pagination-item">
               <a class="pagination-link pagination-current">1</a>
               </li>
@@ -226,15 +226,17 @@
               </li>     
             </ul>
         
-            <p class="pagination-description">Гостиниц на странице:</p>
+            <div class="pagination pagination-on-page flex-container">
+              <p class="pagination-description">Гостиниц на странице:</p>
+              <select class="select-control select-hotel-on-page" aria-label="Сортировка">    
+                <option value="2">2</option>
+                <option value="4" selected>4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="10">10</option>     
+              </select>
+            </div>
 
-           <select class="select-control select-hotel-on-page" aria-label="Сортировка">    
-              <option value="2">2</option>
-              <option value="4" selected>4</option>
-              <option value="6">6</option>
-              <option value="8">8</option>
-              <option value="10">10</option>     
-           </select>
           </div>
         </section>
         
@@ -243,7 +245,8 @@
           <h2 class="subscription-title subscription-inner-title">Подпишитесь на рассылку</h2>
           <p class="subscription-inner-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscription-inner-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="visually-hidden">Email
+              <label>
+                <span class="visually-hidden">Email</span>
                 <input class="field" name="subscription-email" type="email" placeholder="Ваш e-mail" required>
               </label>
               <button class="button subscription-button blue-button" type="submit">Подписаться</button>
