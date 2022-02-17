@@ -540,6 +540,7 @@
 
 .hotel-image {
     display: block;
+    object-fit:contain;
 }
 
 .hotel-card-name-link {
