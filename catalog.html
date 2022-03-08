@@ -73,59 +73,92 @@
 
           <h2 class="visually-hidden">Фильтр выбора жилья</h2>
           <form class="hotel-filter container flex-container" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="hotel-filter-group">
+            <fieldset class="hotel-filter-group infrastructure-group">
                 <legend class="hotel-filter-titel">Инфраструктура:</legend>
                 <ul class="hotel-filter-list">
                     <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="checkbox" name="Бассейн" checked>Бассейн
+                          <input class="visually-hidden control-input" type="checkbox" name="Бассейн" checked>
+                          <span class="control-mark"></span>
+                          <span class="control-lable">Бассейн</span>
                         </label>
                     </li>
                     <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="checkbox" name="Парковка" checked>Парковка
+                          <input class="visually-hidden control-input" type="checkbox" name="Парковка" checked>
+                            <span class="control-mark"></span>
+                            <span class="control-lable">Парковка</span>
                         </label>
                     </li>
                     <li class="hotel-filter-item">
                         <label class="control">
-                          <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi
+                          <input class="visually-hidden control-input" type="checkbox" name="Wi-Fi">
+                          <span class="control-mark"></span>
+                          <span class="control-lable">Wi-Fi</span>
                         </label>
                     </li>
                 </ul>
             </fieldset>
 
-            <fieldset class="hotel-filter-group">
+            <fieldset class="hotel-filter-group type-of-housing-group">
               <legend class="hotel-filter-titel">Тип жилья:</legend>
               <ul class="hotel-filter-list">
                   <li class="hotel-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" value="hotel" name="type of housing" checked>Гостиница
+                      <input class="visually-hidden control-input" type="radio" value="hotel" name="type of housing" checked>
+                        <span class="control-mark"></span>
+                        <span class="control-lable">Гостиница</span>
                     </label>
                   </li>
                   <li class="hotel-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" value="motel" name="type of housing">Мотель
+                      <input class="visually-hidden control-input" type="radio" value="motel" name="type of housing">
+                        <span class="control-mark"></span>
+                        <span class="control-lable">Мотель</span>
                     </label>
                   </li>
                   <li class="hotel-filter-item">
                     <label class="control">
-                      <input class="control-input" type="radio" value="apartments" name="type of housing">Апартаменты
+                      <input class="visually-hidden control-input" type="radio" value="apartments" name="type of housing">
+                        <span class="control-mark"></span>
+                        <span class="control-lable">Апартаменты</span>
                     </label>
                   </li>
               </ul>
             </fieldset>
 
-            <fieldset class="hotel-filter-group">
+            <fieldset class="hotel-filter-group prise-group">
                 <legend class="hotel-filter-titel">Стоимость, ₽:</legend>
-                <label>
-                  <input type="text" value="0" placeholder="От"></label>
-                <label>
-                  <input type="text" value="9000" placeholder="До"></label>
-                <input type="range" min="0" max="9000" step="100" value="7000">
+                <div class="range">
+                  <div class="range-wrapper-inputs">
+                    <label class="range-input-control">
+                      <input class="range-input from" type="numbers" value="0" name="min-price">
+                      <span class="range-input-name">от</span>
+                    </label>
+                    <label class="range-input-control">
+                      <input class="range-input to" type="numbers" value="9000" name="max-price">
+                      <span class="range-input-name">до</span>
+                    </label>
+                  </div>
+
+                  <div class="range-scale"> 
+                    <div class="range-bar" style="width: 227px;">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
             </fieldset>
 
-            <button class="button apply-button blue-button" type="submit">Применить</button>
-            <button class="button reset-button clear-button" type="reset">Сбросить</button>
+            <div class="button-wrapper">
+              <button class="button apply-button blue-button" type="submit">Применить</button>
+              <button class="button reset-button clear-button" type="reset">Сбросить</button>
+            </div>
+            
           </form> 
             
         </section>
@@ -134,11 +167,14 @@
         <section class="hotel-search-results">
           <div class="container flex-container sorting-container">
             <h2 class="hotel-search-results-titel">Найдено гостиниц: 38</h2>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешёвые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
+            <div class="select">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+            </div>
+            
             
             <ul class="hotel-search-menu-view-list">
               <li class="hotel-search-menu-view-item">
@@ -277,7 +313,7 @@
             <form class="subscription-form subscription-inner-form" action="https://echo.htmlacademy.ru/" method="post">
               <label>
                 <span class="visually-hidden">Email</span>
-                <input class="field" name="subscription-email" type="email" placeholder="Ваш e-mail" required>
+                <input class="field subscription-field" name="subscription-email" type="email" placeholder="Ваш e-mail" required>
               </label>
               <button class="button subscription-button blue-button" type="submit">Подписаться</button>
             </form>
