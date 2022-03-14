@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico"> <!-- 32×32 -->
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -68,20 +69,20 @@
                 <div class="advantages-block">
                   <h3 class="advantages-title">Настоящий городок</h3>
                   <p class="advantages-number">— №1 —</p>
-                  <p class="advantages-description">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт 
-                    своя жизнь</p>
+                  <p class="advantages-description">Седона&nbsp;&mdash; не&nbsp;аттракцион для&nbsp;туристов, там течёт 
+                    своя&nbsp;жизнь</p>
                 </div>
                 <img class="advantages-image" src="images/index/advantages-city.jpeg" width="800" height="384" alt="Городок Седона">
               </div>
                 <ul class="inner-advantages-list">
                   <li class="inner-advantages-item bg-gray living"> 
                     <h4 class="inner-advantages-title">Жильё</h4>
-                    <p class="advantages-description">Рекомендуем пожить в&nbsp;настоящем мотеле, всё как в&nbsp;кино!</p>
+                    <p class="advantages-description">Рекомендуем пожить в&nbsp;настоящем мотеле, всё&nbsp;как&nbsp;в&nbsp;кино!</p>
                   </li>
                   <li class="inner-advantages-item bg-white food"> 
                     <h4 class="inner-advantages-title">Еда</h4>
-                    <p class="advantages-description">Всегда заказывайте
-                      топовый фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
+                    <p class="advantages-description">Всегда&nbsp;заказывайте
+                      топовый&nbsp;фирменный&nbsp;бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
                   </li>
                   <li class="inner-advantages-item bg-gray souvenirs"> 
                     <h4 class="inner-advantages-title">Сувениры</h4>
@@ -128,7 +129,7 @@
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <label>
               <span class="visually-hidden">Email</span>
-              <input class="field" name="subscription-email" type="email" placeholder="Ваш e-mail" required>
+              <input class="field subscription-field" name="subscription-email" type="email" placeholder="Ваш e-mail" required>
             </label>
             <button class="button subscription-button blue-button" type="submit">Подписаться</button>
           </form>
@@ -182,6 +183,67 @@
           </a>
         </div>
       </footer>
+
+      <div class="modal-container">
+        <div class="modal modal-auth">
+          <section class="modal-content"> 
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close-button button"></button>
+            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="field-group modal-form-date">
+                <label class="form-label form-label-date" for="input-date-in">Дата заезда:</label>
+                  <input class="field modal-field modal-date-field date-in-field" type="text" name="modal-date-in" placeholder="27 апреля 2020" id="input-date-in">
+                  <button class="date-button"></button>
+              </p>
+              <span class="modal-discription date-in modal-error">Мы не можем отправить вас в прошлое.</span>
+              <p class="field-group modal-form-date">
+                <label class="form-label form-label-date" for="input-date-out">Дата выезда:</label>
+                  <input class="field modal-field modal-date-field date-out-field" type="text" name="modal-date-out" placeholder="1 сентября 2021" id="input-date-out">
+                  <button class="date-button"></button>
+              </p>
+              <span class="modal-discription date-out">На эти даты есть свободные номера. Пока есть.</span>
+              <p class="field-group modal-form-visitors">
+              <label class="form-label form-label-adults" for="input-adults">Взрослые:</label>
+                <button class="modal-number-button min-button" type="button">
+                  <svg class="modal-number-icon" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z" />
+                  </svg>
+                </button>
+                <input class="field modal-field modal-numbers-field" type="number" name="adults" value="1" min="1" id="input-adults">
+                <button class="modal-number-button max-button" type="button">
+                  <svg class="modal-number-icon" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
+                  </svg>
+                </button>
+                <span class="form-label form-label-children form-label-icon">
+                  <label for="input-children">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-label">
+                      <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.5" cy="12.5" r="12.5" /><g clip-path="url(#a)" fill="#fff"><path d="M12 17h1v-6h-1v6ZM13 8h-1v1h1V8Z"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(12 8)" d="M0 0h1v9H0z"/></clipPath></defs>
+                      </svg>
+                    </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с&nbsp;вами, возраст которых от&nbsp;6&nbsp;до&nbsp;18&nbsp;лет. Дети до&nbsp;6&nbsp;лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <button class="modal-number-button min-button" type="button">
+                  <svg class="modal-number-icon" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z" />
+                  </svg>
+                </button>
+                <input class="field modal-field modal-numbers-field" type="number" name="children" value="1" min="0" id="input-children">
+                <button class="modal-number-button max-button" type="button">
+                  <svg class="modal-number-icon" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
+                  </svg>
+                </button>
+              </p>          
+              <button class="button modal-submit blue-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
