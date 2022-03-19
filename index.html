@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="favicon.ico">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -93,7 +93,7 @@
             </li>
             <li class="advantages-item bg-blue">
               <div class="advantages-block">
-                <h3 class="advantages-title">Там есть мост дьявола</h3>
+                <h3 class="advantages-title">Там&nbsp;есть мост&nbsp;дьявола</h3>
                 <p class="advantages-number">— №2 —</p>
                 <p class="advantages-description blue">Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь, разумеется</p>
               </div>
@@ -188,32 +188,40 @@
         <div class="modal modal-auth">
           <section class="modal-content"> 
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-            <button class="modal-close-button button"></button>
+            <button class="modal-close-button button" type="button">
+              <span class="visually-hidden">Закрыть окно</span>
+            </button>
             <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="field-group modal-form-date">
                 <label class="form-label form-label-date" for="input-date-in">Дата заезда:</label>
                   <input class="field modal-field modal-date-field date-in-field" type="text" name="modal-date-in" placeholder="27 апреля 2020" id="input-date-in">
-                  <button class="date-button"></button>
+                  <button class="date-button" type="button">
+                    <span class="visually-hidden">Выбрать даты</span>
+                  </button>
               </p>
               <span class="modal-discription date-in modal-error">Мы не можем отправить вас в прошлое.</span>
               <p class="field-group modal-form-date">
                 <label class="form-label form-label-date" for="input-date-out">Дата выезда:</label>
                   <input class="field modal-field modal-date-field date-out-field" type="text" name="modal-date-out" placeholder="1 сентября 2021" id="input-date-out">
-                  <button class="date-button"></button>
+                  <button class="date-button" type="button">
+                    <span class="visually-hidden">Выбрать даты</span>
+                  </button>
               </p>
               <span class="modal-discription date-out">На эти даты есть свободные номера. Пока есть.</span>
               <p class="field-group modal-form-visitors">
               <label class="form-label form-label-adults" for="input-adults">Взрослые:</label>
                 <button class="modal-number-button min-button" type="button">
-                  <svg class="modal-number-icon" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Уменьшить">
+                  <svg class="modal-number-icon" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg" role="img">
                     <path d="M0 0v1h13V0H0Z" />
                   </svg>
+                  <span class="visually-hidden">Уменьшить</span>
                 </button>
                 <input class="field modal-field modal-numbers-field" type="number" name="adults" value="1" min="1" id="input-adults">
                 <button class="modal-number-button max-button" type="button">
-                  <svg class="modal-number-icon" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Увеличить">
+                  <svg class="modal-number-icon" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg" role="img">
                     <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
                   </svg>
+                  <span class="visually-hidden">Увеличить</span>
                 </button>
                 <span class="form-label form-label-children form-label-icon">
                   <label for="input-children">Дети:</label>
