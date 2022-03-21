@@ -127,7 +127,7 @@
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label>
+            <label class="subscription-label">
               <span class="visually-hidden">Email</span>
               <input class="field subscription-field" name="subscription-email" type="email" placeholder="Ваш e-mail" required>
             </label>
@@ -137,7 +137,7 @@
       </main>
 
       <footer class="page-footer">
-        <div class="container grid-container">
+        <div class="grid-container">
           <section class="footer-social">
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="footer-social-list">
@@ -211,7 +211,7 @@
               <p class="field-group modal-form-visitors">
               <label class="form-label form-label-adults" for="input-adults">Взрослые:</label>
                 <button class="modal-number-button min-button" type="button">
-                  <svg class="modal-number-icon" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg" role="img">
+                  <svg class="modal-number-icon min" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg" role="img">
                     <path d="M0 0v1h13V0H0Z" />
                   </svg>
                   <span class="visually-hidden">Уменьшить</span>
@@ -235,15 +235,17 @@
                   </span>
                 </span>
                 <button class="modal-number-button min-button" type="button">
-                  <svg class="modal-number-icon" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Уменьшить">
+                  <svg class="modal-number-icon min" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg" role="img">
                     <path d="M0 0v1h13V0H0Z" />
+                    <span class="visually-hidden">Уменьшить</span>
                   </svg>
                 </button>
                 <input class="field modal-field modal-numbers-field" type="number" name="children" value="1" min="0" id="input-children">
                 <button class="modal-number-button max-button" type="button">
-                  <svg class="modal-number-icon" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Увеличить">
+                  <svg class="modal-number-icon" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg" role="img">
                     <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" />
                   </svg>
+                  <span class="visually-hidden">Увеличить</span>
                 </button>
               </p>          
               <button class="button modal-submit blue-button" type="submit">Найти</button>
