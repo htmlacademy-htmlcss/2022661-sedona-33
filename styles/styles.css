@@ -1246,7 +1246,7 @@ li.advantages-block {
     background-color: transparent;
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
-    padding: 20px 10px 10px 16px;
+    padding: 13px 10px 12px 16px;
 }
 
 .range-input[type="number"] {
@@ -1288,7 +1288,7 @@ li.advantages-block {
     font-size: 18px;
     line-height: 23px;
     opacity: 0.3;
-    bottom: 10px;
+    bottom: 13px;
     left: 109px;
 }
 
@@ -1433,7 +1433,7 @@ li.advantages-block {
     background-color: #FFFFFF;
     border: 2px solid #E6E6E6;
     border-radius: 4px;
-    padding: 8px 17px 13px;
+    padding: 10px 17px 11px;
     background-image: url("../images/catalog/catalog-select-arrow.svg");
     background-repeat: no-repeat;
     background-position: right 20px center;
